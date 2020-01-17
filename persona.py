@@ -39,7 +39,7 @@ class Persona:
             print("###################################\n")
             print("Total de registros: ",self.a.mycursor.rowcount)
             for data in resultado:
-                print("Identificacion: {} Nombre: {} - Apellido: {} - Telefono: {} - Email: {} - Dirrección: {}".format(data[6],data[0],data[1],data[2],data[4],data[3]))
+                print("Codigo: {} - Identificacion: {} Nombre: {} - Apellido: {} - Telefono: {} - Email: {} - Dirrección: {}".format(data[5],data[6],data[0],data[1],data[2],data[4],data[3]))
             print()
                 
     ##==========================
@@ -60,7 +60,7 @@ class Persona:
             print("#        listado de clientes      #".upper())
             print("###################################\n")
             print("Total de registros: ",self.a.mycursor.rowcount)
-            print("Identificacion: {} Nombre: {} - Apellido: {} - Telefono: {} - Email: {} - Dirrección: {}".format(resultado[6],resultado[0],resultado[1],resultado[2],resultado[4],resultado[3]))
+            print("Codigo: {} - Identificacion: {} Nombre: {} - Apellido: {} - Telefono: {} - Email: {} - Dirrección: {}".format(resultado[5],resultado[6],resultado[0],resultado[1],resultado[2],resultado[4],resultado[3]))
             print()
     ##==========================
     ## Metodo para Modificar Cliente

@@ -1,7 +1,9 @@
 from conex import Conectar
 from persona import Persona
+from compra import Compra
 f = Conectar()
 a = Persona()
+c = Compra()
 # f.mostrar()
 # f.crearComic()
 
@@ -23,7 +25,11 @@ while True:
     print("#    8. Buscar Cliente           #".upper())
     print("#    9. Modificar Cliente        #".upper())
     print("#    10. Eliminar Cliente        #".upper())
-    print("#    11. Salir de la tienda      #".upper())
+    print("#    11. Registrar Compra        #".upper())
+    print("#    12. Listar Compras          #".upper())
+    print("#    13. Buscar Compra           #".upper())
+    print("#    14. Eliminar Compra         #".upper())
+    print("#    15. Salir de la tienda      #".upper())
     print("##################################")
     opcion = int(input("Elija una opcion: ".upper()))
     if opcion == 1:
@@ -47,8 +53,17 @@ while True:
     elif  opcion == 10:
         a.eliminar_persona()
     elif opcion == 11:
+        c.Crear_Compra()
+    elif  opcion == 12:
+        c.Listar_Compras()
+    elif  opcion == 13:
+        c.Buscar_Compra()
+    elif  opcion == 14:
+        c.Eliminar_Compra()
+    elif opcion == 15:
         break
-print("!!!gracias por vicitar nuestra tienda!!!".upper())
+    
+print("!!!gracias por visitar nuestra tienda!!!".upper())
 
 
 
