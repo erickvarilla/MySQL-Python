@@ -1,0 +1,23 @@
+SQL para crear una relacion de muchos a muchos
+CREATE TABLE compra(id_compra INT(10) NOT NUll AUTO_INCREMENT,id_comic INT NOT NULL,id_persona INT NOT NULL,fecha_compra DATA NOT NULL,
+                   PRIMARY KEY(id_compra,id_comic,id_persona),
+                   FOREIGN KEY(id_comic) REFERENCES revista (id),
+                   FOREIGN KEY(id_persona) REFERENCES persona (id))
+# Para instalar la libreria de mysql
+python -m pip install mysql-connector
+# Importar libreria
+import mysql.connector
+# crear conexion a la base de datos
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  passwd="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor() # importante crear el cursor para haer referecia a la BD
+
+mycursor.execute("SHOW TABLES") # Listo las tablas que contiene esa BD
+
+for x in mycursor:
+  print(x) # Las muestro en consola las tables
